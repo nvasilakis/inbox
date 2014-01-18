@@ -33,6 +33,7 @@ class ImapAccount(Base):
     # http://stackoverflow.com/questions/386294/what-is-the-maximum-length-of-a-valid-email-address
     email_address = Column(String(254), nullable=True, index=True)
     provider = Column(Enum('Gmail', 'Outlook', 'Yahoo', 'Inbox'), nullable=False)
+    # archive_folder = Column(String(255), nullable=True)
 
     # local flags & data
     save_raw_messages = Column(Boolean, default=True)
